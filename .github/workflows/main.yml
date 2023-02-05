@@ -14,7 +14,7 @@ jobs:
           super_secret: ${{ secrets.MY_SECRET }}
         run: |
           if [[ $super_secret == "repo secret" ]]; then 
-            echo "repo secret"
+            echo "successfully got the repo value"
           fi
   get-env-secret: 
     environment: dev
@@ -25,5 +25,5 @@ jobs:
           super_secret: ${{ secrets.MY_SECRET }}
         run: |
           if [[ $super_secret == "env secret" ]]; then 
-            echo "env secret"
+            echo "successfully got the env value"
           fi
