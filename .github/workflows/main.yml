@@ -13,7 +13,7 @@ jobs:
         env: 
           super_secret: ${{ secrets.MY_SECRET }}
         run: |
-          if [["$super_secret" == 'repo secret']]; then 
+          if [[ $super_secret == "repo secret"]]; then 
             echo "repo secret"
           fi
   get-env-secret: 
@@ -24,6 +24,6 @@ jobs:
         env: 
           super_secret: ${{ secrets.MY_SECRET }}
         run: |
-          if [["$super_secret" == 'env secret']]; then 
+          if [[ $super_secret == "env secret"]]; then 
             echo "env secret"
           fi
